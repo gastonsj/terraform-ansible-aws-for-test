@@ -1,0 +1,13 @@
+---
+- name: Crear archivo de texto en servidores esclavos
+  hosts: esclavos
+  remote_user: ubuntu
+
+  tasks:
+    - name: Crear archivo de texto con la palabra "prueba"
+      copy:
+        content: "prueba\n"  # Contenido del archivo que quieres crear
+        dest: /home/ubuntu/prueba.txt  # Ruta donde se creará el archivo en el servidor remoto
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'  # Permisos del archivo

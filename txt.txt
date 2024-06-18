@@ -1,0 +1,3 @@
+  scp -i kp-gleiva-west-1.pem ubuntu@<ip>:/home/ubuntu
+  
+  terraform plan -generate-config-out='generated.tf' 
